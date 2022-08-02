@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>Spring Security Example</title>
+</head>
+
+<body>
+
+Welcome to your page user
+<br/>
+username: <tr th:text="${user.getUsername()}">username</tr>
+<br/>
+password: <tr th:text="${user.getPassword()}">password</tr>
+<br/>
+roles: <tr th:text="${user.getRoles}">roles</tr>
+<br/>
+<a th:href="@{/logout}">logout</a>
+<br/>
+<a th:href="@{/}">Go to start page</a>
+</body>
+
+</html>
