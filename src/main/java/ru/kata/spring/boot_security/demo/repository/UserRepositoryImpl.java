@@ -18,21 +18,32 @@ public class UserRepositoryImpl implements UserRepository{
 
     @Override
     public User findByUsername(String username) {
-        return entityManager.createQuery("SELECT u FROM User u WHERE u.username =: username", User.class).setParameter("username", username).getSingleResult();
+        return entityManager.createQuery("SELECT u FROM User u WHERE u.username =: username", User.class)
+                .setParameter("username", username).getSingleResult();
     }
 
     @Override
-    public void saveUser(User user) {entityManager.persist(user);}
+    public void saveUser(User user) {
+        entityManager.persist(user);
+    }
 
     @Override
-    public User get(Long id) {return entityManager.find(User.class, id);}
+    public User get(Long id) {
+        return entityManager.find(User.class, id);
+    }
 
     @Override
-    public List<User> listUsers() {return entityManager.createQuery("SELECT u FROM User u ", User.class).getResultList();}
+    public List<User> listUsers() {
+        return entityManager.createQuery("SELECT u FROM User u ", User.class).getResultList();
+    }
 
     @Override
-    public void update(User user) { entityManager.merge(user); }
+    public void update(User user) {
+        entityManager.merge(user);
+    }
 
     @Override
-    public void delete(Long id) {entityManager.remove(get(id));}
+    public void delete(Long id) {
+        entityManager.remove(get(id));
+    }
 }

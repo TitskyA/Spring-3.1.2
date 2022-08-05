@@ -18,7 +18,9 @@ public class RoleRepositoryImpl implements RoleRepository{
     }
 
     @Override
-    public void add(Role role) { entityManager.persist(role); }
+    public void add(Role role) {
+        entityManager.persist(role);
+    }
 
     @Override
     public Role findByRoleName(String name) {

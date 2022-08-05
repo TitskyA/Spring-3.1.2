@@ -20,9 +20,13 @@ public class Role implements GrantedAuthority {
         this.name = name;
     }
 
-    public String getName() { return name; }
+    public String getName() {
+        return name;
+    }
 
-    public void setName(String name) { this.name = name; }
+    public void setName(String name) {
+        this.name = name;
+    }
 
     @Override
     public String toString() {
@@ -33,5 +37,4 @@ public class Role implements GrantedAuthority {
     public String getAuthority() {
         return getName();
     }
-
 }

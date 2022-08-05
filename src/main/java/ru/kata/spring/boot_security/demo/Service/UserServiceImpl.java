@@ -37,19 +37,29 @@ public class UserServiceImpl implements UserDetailsService, UserService {
     }
 
     @Override
-    public User get(Long id) {return userRepository.get(id);}
+    public User get(Long id) {
+        return userRepository.get(id);
+    }
 
     @Override
-    public User findByUsername(String username) {return userRepository.findByUsername(username);}
+    public User findByUsername(String username) {
+        return userRepository.findByUsername(username);
+    }
 
     @Override
-    public List<User> listUsers() {return userRepository.listUsers();}
+    public List<User> listUsers() {
+        return userRepository.listUsers();
+    }
 
     @Override
     @Transactional
-    public void update(User user) {userRepository.update(user);}
+    public void update(User user) {
+        userRepository.update(user);
+    }
 
     @Override
     @Transactional
-    public void delete(Long id) {userRepository.delete(id);}
+    public void delete(Long id) {
+        userRepository.delete(id);
+    }
 }

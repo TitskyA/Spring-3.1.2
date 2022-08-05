@@ -13,12 +13,18 @@ public class RoleServiceImpl implements RoleService{
 
     final RoleRepository roleRepository;
 
-    public RoleServiceImpl(RoleRepository roleRepository) {this.roleRepository = roleRepository;}
+    public RoleServiceImpl(RoleRepository roleRepository) {
+        this.roleRepository = roleRepository;
+    }
 
     @Override
     @Transactional
-    public void add(Role role) {roleRepository.add(role);}
+    public void add(Role role) {
+        roleRepository.add(role);
+    }
 
     @Override
-    public Role findByRoleName(String name) {return roleRepository.findByRoleName(name);}
+    public Role findByRoleName(String name) {
+        return roleRepository.findByRoleName(name);
+    }
 }
