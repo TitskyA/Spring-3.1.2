@@ -28,7 +28,7 @@ public class User implements UserDetails {
         this.roles = roles;
     }
 
-    @ManyToMany(fetch = FetchType.EAGER)
+    @ManyToMany(fetch = FetchType.LAZY)
     @JoinColumn(name = "users_roles")
     private List<Role> roles;
 
