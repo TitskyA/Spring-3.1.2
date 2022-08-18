@@ -7,10 +7,12 @@ import ru.kata.spring.boot_security.demo.model.Role;
 
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
+import javax.persistence.PersistenceContext;
 
 @Repository
 public class RoleRepositoryImpl implements RoleRepository{
 
+    @PersistenceContext
     private final EntityManager entityManager;
 
     public RoleRepositoryImpl(EntityManager entityManager) {
